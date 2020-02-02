@@ -1,1 +1,1 @@
-#import <cassandra.h>
+#import <c/cassandra.h>
