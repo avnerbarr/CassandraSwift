@@ -27,9 +27,9 @@ let package = Package(
 //                        .apt(["libgraphqlparser"]),
 //                        ]
                     ),
-        .testTarget(
-            name: "cassandra-swiftTests",
-            dependencies: ["cassandra-swift"]),
+//        .testTarget(
+//            name: "cassandra-swiftTests",
+//            dependencies: ["cassandra-swift"]),
     ]
 )
 
