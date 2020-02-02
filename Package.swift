@@ -21,8 +21,37 @@ let package = Package(
         .target(
             name: "cassandra-swift",
             dependencies: []),
+        .systemLibrary(
+                    name: "CCassandra",
+                    path: "Sources/cassandra",
+                    pkgConfig: "cassandra"
+//                    providers: [
+//                        .brew(["libgraphqlparser"]),
+//                        .apt(["libgraphqlparser"]),
+//                        ]
+                    ),
         .testTarget(
             name: "cassandra-swiftTests",
             dependencies: ["cassandra-swift"]),
     ]
 )
+
+//git clone https://github.com/datastax/cpp-driver.git --depth=1
+//cd cpp-driver/
+//ls
+//mkdir build
+//cd build/
+//   cmake -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl/ -DOPENSSL_LIBRARIES=/usr/local/opt/openssl/lib ..
+//make
+//make install
+//less /usr/local/include/cassandra.h
+//cat /usr/local/lib/pkgconfig/cassandra.pc
+
+
+//-- Install configuration: ""
+//-- Installing: /usr/local/include/cassandra.h
+//-- Installing: /usr/local/include/dse.h
+//-- Installing: /usr/local/lib/libcassandra.2.15.0.dylib
+//-- Installing: /usr/local/lib/libcassandra.2.dylib
+//-- Up-to-date: /usr/local/lib/libcassandra.dylib
+//-- Installing: /usr/local/lib/pkgconfig/cassandra.pc

@@ -1,0 +1,5 @@
+module CGraphQLParser [system] {
+    umbrella header  "cassandraump.h"
+    link "cassandra"
+    export *
+}
