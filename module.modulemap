@@ -1,0 +1,5 @@
+module cassandra_swift [system] {
+  header "/usr/local/include/cassandra.h"
+  link "libcassandra"
+  export *
+}
