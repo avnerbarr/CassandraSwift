@@ -1,0 +1,5 @@
+module cassandra_swift [system] {
+  header "Clibcassandra.h"
+  link "cassandra_swift"
+  export *
+}
