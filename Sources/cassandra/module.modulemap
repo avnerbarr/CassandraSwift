@@ -1,4 +1,4 @@
-module CGraphQLParser [system] {
+module CCassandra [system] {
     umbrella header  "cassandraump.h"
     header "/usr/local/include/cassandra.h"
     link "cassandra"
