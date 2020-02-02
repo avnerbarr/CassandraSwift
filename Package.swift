@@ -2,17 +2,27 @@
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
-// https://medium.com/shopify-mobile/wrapping-a-c-library-in-swift-part-1-6dd240070cef
-let package = Package(
-    name: "CCassandra",
-    pkgConfig: "cassandra"
-)
 
-// Install the project...
-// -- Install configuration: ""
-// -- Installing: /usr/local/include/cassandra.h
-// -- Installing: /usr/local/include/dse.h
-// -- Installing: /usr/local/lib/libcassandra.2.15.0.dylib
-// -- Installing: /usr/local/lib/libcassandra.2.dylib
-// -- Up-to-date: /usr/local/lib/libcassandra.dylib
-// -- Installing: /usr/local/lib/pkgconfig/cassandra.pc
+let package = Package(
+    name: "cassandra-swift",
+    products: [
+        // Products define the executables and libraries produced by a package, and make them visible to other packages.
+        .library(
+            name: "cassandra-swift",
+            targets: ["cassandra-swift"]),
+    ],
+    dependencies: [
+        // Dependencies declare other packages that this package depends on.
+        // .package(url: /* package url */, from: "1.0.0"),
+    ],
+    targets: [
+        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
+        // Targets can depend on other targets in this package, and on products in packages which this package depends on.
+        .target(
+            name: "cassandra-swift",
+            dependencies: []),
+        .testTarget(
+            name: "cassandra-swiftTests",
+            dependencies: ["cassandra-swift"]),
+    ]
+)

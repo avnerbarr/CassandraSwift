@@ -1,6 +1,0 @@
-module cassandra_swift [system] {
-  header "shim.h"
-  header "/usr/local/include/cassandra.h"
-  link "cassandra"
-  export *
-}
